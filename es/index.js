@@ -41,9 +41,8 @@ function (_Component) {
       });
     };
 
-    console.log(props);
     _this.state = {
-      editorState: BraftEditor.createEditorState(null),
+      editorState: BraftEditor.createEditorState(props.value ? props.value : null),
       outputHTML: '<p></p>'
     };
     return _this;

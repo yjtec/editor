@@ -4,9 +4,9 @@ import 'braft-editor/dist/index.css';
 class Editor extends Component{
   constructor(props) {
     super(props);
-    console.log(props);
+
     this.state = {
-      editorState: BraftEditor.createEditorState(null),
+      editorState: BraftEditor.createEditorState(props.value ? props.value :null),
       outputHTML:'<p></p>'
     }
   }
